@@ -1,7 +1,6 @@
-#!/usr/bin/bash
+#!/bin/bash
 
-echo "Displaying content os $1 in UPPERCASE "
+# cat $1 |  tr '[:lower:]' '[:upper:]'
 
-printf "\n"
 
-cat $1 | tr '[:lower:]' '[:upper:]/'
+awk '{print toupper($0)}' $1
